@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Pruebas de Iframes</title>
+	<link rel="stylesheet" href="ifr.css">
+</head>
+<body>
+	<div class="contIfr">
+		<iframe src="http://www.frontdev.cl/beegle" frameborder="0"></iframe>
+	</div>	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script>
+		$(window).resize(function(){
+			var ventana_ancho = $(window).width();
+			var ventana_alto = $(window).height();
+			console.log(ventana_ancho+' '+ventana_alto);
+			$('.contIfr').height(ventana_alto - 10);
+		});
+	</script>
+</body>
+</html>
